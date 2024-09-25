@@ -15,4 +15,16 @@ function addToList(){
     contador++;
 
 }
+function deletetolist() {
+    let lista = document.getElementById("lista")!;
+    let index = document.getElementById("campotexto").value;
+    let items = lista.getElementsByTagName("li"); 
+    let indexNum = parseInt(index, 10);
+    if (!isNaN(indexNum) && indexNum > 0 && indexNum <= items.length) {
+        lista.removeChild(items[indexNum - 1]); 
+    }
+    else {
+        alert("Por favor, ingresa un número válido dentro del rango de elementos.");
+    }
+}
 let contador: number = 1;
