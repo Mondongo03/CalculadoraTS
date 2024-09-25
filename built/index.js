@@ -13,4 +13,17 @@ function addToList() {
     nuevoElemento.innerHTML = "Elemento " + contador;
     contador++;
 }
+function deletetolist() {
+    var _a;
+    let lista = document.getElementById("lista");
+    let index = (_a = document.getElementById("campotexto")) === null || _a === void 0 ? void 0 : _a.nodeValue;
+    let items = lista.getElementsByTagName("li");
+    let indexNum = parseInt(index, 10);
+    if (!isNaN(indexNum) && indexNum > 0 && indexNum <= items.length) {
+        lista.removeChild(items[indexNum - 1]);
+    }
+    else {
+        alert("Por favor, ingresa un número válido dentro del rango de elementos.");
+    }
+}
 let contador = 1;
