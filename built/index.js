@@ -9,16 +9,25 @@ function cambiarTitulo() {
 function addToList() {
     let lista = document.getElementById("lista");
     let nuevoElemento = document.createElement("li");
+    let content = document.getElementById("campotexto").value;
     lista.append(nuevoElemento);
-    nuevoElemento.innerHTML = "Elemento " + contador;
+    let defaultTipo = document.getElementById("default");
+    let boldTipo = document.getElementById("bold");
+    let italicTipo = document.getElementById("italic");
+    if (boldTipo.checked)
+        nuevoElemento.innerHTML = "<b>" + content + "</b>";
+    else if (italicTipo.checked)
+        nuevoElemento.innerHTML = "<i>" + content + "</i>";
+    else
+        nuevoElemento.innerHTML = content;
+    content != "";
     contador++;
 }
-function deletetolist() {
-    var _a;
-    let lista = document.getElementById("lista");
-    let index = (_a = document.getElementById("campotexto")) === null || _a === void 0 ? void 0 : _a.nodeValue;
-    let items = lista.getElementsByTagName("li");
-    let indexNum = parseInt(index, 10);
+function deleteToList() {
+    const lista = document.getElementById("lista");
+    const index = document.getElementById("campotexto").value;
+    const items = lista.getElementsByTagName("li");
+    const indexNum = parseInt(index, 10);
     if (!isNaN(indexNum) && indexNum > 0 && indexNum <= items.length) {
         lista.removeChild(items[indexNum - 1]);
     }

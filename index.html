@@ -8,56 +8,28 @@
     <title>Document</title>
 </head>
 <body>
-    <header id="titulo">MAGIC THE GATHERING</header>
-
-    <table>
-        <tr>
-            <th>
-                <img src="https://cdn.cardsrealm.com/images/cartas/cmm-commander-masters/FR/med/colere-de-dieu-70.png?454?&width=250" alt="" srcset="">
-                <h3>IRA DE DIOS</h3>
-            </th>
-            <th>
-                <img src="https://cdn.cardsrealm.com/images/cartas/mul-multiverse-legends/es/med/kenrith-el-rey-regresado-4.png?130?&width=250" alt="" srcset="">
-                <h3>KENRITH, EL REY REGRESADO</h3>
-            </th>
-            <th>
-                <img src="https://cdn.cardsrealm.com/images/cartas/sld-secret-lair-drop/en/med/athreos-god-of-passage-76.png?4220?&width=250" alt="" srcset="">
-                <h3>ATREOS, DIOS DEL PASAJE</h3>
-            </th>
-            <th>
-                <img src="https://cdn.cardsrealm.com/images/cartas/sld-secret-lair-drop/en/med/heliod-god-of-the-sun-68.png?7161?&width=250" alt="" srcset="">
-                <h3>HELIOD, DIOS DEL SOL</h3>
-            </th>
-            <th>
-                <img src="https://cdn.cardsrealm.com/images/cartas/spg-special-guests/EN/med/mana-crypt-17e.png?4344?&width=250" alt="" srcset="">
-                <h3>CRIPTA DE MANÁ</h3>
-            </th>
-            <th>
-                <img src="https://cdn.cardsrealm.com/images/cartas/cmm-commander-masters/en/med/jeweled-lotus-702.png?7375?&width=250" alt="" srcset="">
-                <h3>LOTO ENJOYADO</h3>
-            </th>
-        </tr>
-        <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </table>
-    <li id="lista"></li>
-    <button onclick="addToList()">Añadir lista</button>
-    <form>
-        <label for="campoTexto">Ingrese posición:</label>
-        <input type="text" id="campotexto" name="campoTexto" placeholder="Escribe algo aquí">
-        <button type="button" onclick= "addtolist()">Añadir</button>
-        <button type="button" onclick= "deletetolist()">Eliminar</button>
-    </form>
-    <script src="./built/index.js"></script>
+    <div class="calculadora">
+        <input type="text" placeholder="0"></label>
+        <div id="numeros">
+            <button id="1" class="numero">1</button>
+            <button id="2" class="numero">2</button>
+            <button id="3" class="numero">3</button>
+            <button id="4" class="numero">4</button>
+            <button id="5" class="numero">5</button>
+            <button id="6" class="numero">6</button>
+            <button id="7" class="numero">7</button>
+            <button id="8" class="numero">8</button>
+            <button id="9" class="numero">9</button>
+            <button id="0" class="numero">0</button>
+            <button id="," class="caracterEspecial">,</button>
+            <button id="c" class="caracterEspecial">C</button>
+        </div>
+        <div id="operaciones">
+            <button id="sumar" class="operaciones">+</button>
+            <button id="restar" class="operaciones">-</button>
+            <button id="multiplicar" class="operaciones">X</button>
+            <button id="dividir" class="operaciones">/</button>
+        </div>
+    </div>
 </body>
 </html>
