@@ -4,19 +4,30 @@ body {
 .calculadora {
     border: solid;
     margin: 0 auto;
-    width: 30%;
+    width: 215px;
     border-radius: 5px;
     align-items: center;
     
+    
 }
-input {
-    width: 95%;
+label {
+    width: 215px;
     font-size: 30px;
-    border: solid;
+    border: solid 1px;
+    display: inline-block;
+    margin-bottom: 5px;
+    text-align: right;
+    
    
 }
-#numeros {
-    width: 80%;
+#teclas {
+    display: flex;
+}
+#numeros{
+    width: 167px;
+}
+#operaciones {
+    width: 50px;
 }
 .numero {
     width: 50px;
@@ -30,6 +41,14 @@ input {
     width: 50px;
     height: 50px;
     background-color: rgb(189, 189, 189);
+    border-radius: 10px;
+    box-shadow: 0;
+}
+
+.operaciones {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(248, 217, 38);
     border-radius: 10px;
     box-shadow: 0;
 }

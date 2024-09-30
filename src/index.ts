@@ -1,11 +1,3 @@
-let titulo: HTMLElement = document.getElementById("titulo")!;
-
-function cambiarTitulo(){
-    if(titulo!){
-        titulo.innerHTML = "Títuloooooooooooooooooooo";
-        titulo.style.color = "000f0f"
-    }
-}
 
 function addToList(){
     let lista: HTMLElement = document.getElementById("lista")!;
@@ -22,7 +14,7 @@ function addToList(){
     else nuevoElemento.innerHTML = content;
     
     content!= "" ;
-    contador++;
+    
 
 }
 
@@ -39,4 +31,74 @@ function deleteToList(): void {
     }
 }
 
-let contador: number = 1;
+let numero1: string = "";
+let numero2: string = "";
+let suma: boolean = false;
+let multiplicacion: boolean = false
+let resta: boolean = false;
+let division: boolean = false;
+let labelText = document.getElementById("texto");
+
+/*function clickNumber(numero:number){
+    if (typeof numero !== 'number') {
+        console.error('El parámetro debe ser un número');
+        return; // Salir de la función si no es un número
+    }
+    switch(numero){
+        case 1: {
+            if(!suma || !multiplicacion || !resta || !division) numero1 = numero1.concat("1");
+            else numero2 = numero2.concat("1");
+            labelText!.innerText = labelText!.innerText + "1"; 
+                break;
+
+        }
+       
+    }
+}*/
+let currentOperation: string = '';
+let currentInput: string = '';
+
+function clickNumber(num: number): void {
+    currentInput += num.toString();
+    updateTexto(currentOperation + currentInput);
+}
+
+function updateTexto(value: string): void {
+    const display: HTMLElement | null = document.getElementById('texto');
+    if (display) {
+        display.innerText = value;
+    }
+}
+
+function clearTexto(): void {
+    currentOperation = '';
+    currentInput = '';
+    updateTexto('0');
+}
+
+function reset(): void {
+    currentOperation = '';
+    currentInput = '';
+}
+
+function updateOperacion(op: string): void {
+    if (currentInput) {
+        currentOperation += currentInput + ' ' + op + ' ';
+        currentInput = '';
+        updateTexto(currentOperation);
+    }
+}
+
+function calcularResultado(): void {
+    if (currentInput) {
+        currentOperation += currentInput;
+        try {
+            const result = eval(currentOperation); 
+            updateTexto(result.toString());
+            reset();
+        } catch (error) {
+            updateTexto('Error');
+            reset();
+        }
+    }
+}
