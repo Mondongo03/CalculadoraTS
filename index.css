@@ -1,34 +1,60 @@
 body {
-    background-color: white;
+    background-color: black;
+    margin: 5% auto;
+
 }
 .calculadora {
     border: solid;
     margin: 0 auto;
-    width: 600px;
+    width:fit-content;
     border-radius: 10px;
     align-items: auto 0;
+    display: flex;
+    background-color: rgb(37, 37, 37);
+    padding: 40px;
     
+}
+#contenedorTexto {
+    background-color: rgb(66, 65, 65);
+    height: 90%;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    
+}
+strong {
+    color: rgb(74,246,38);
+    text-shadow: 2px 2px 8px #000000;
+    font-family: Fallout;
+    font-size: 30px;
+    margin-right: 20px;
     
 }
 label {
     width: 580px;
-    height: 80px;
+    height: auto;
     font-size: 30px;
-    border: solid 1px;
+    border-radius: 10px;
     display: inline-block;
-    margin-bottom: 10px;
-    text-align: right;
     
-   
+    color: rgb(74,246,38);
+    
+    font-size: 30px;
+    font-family: Fallout;
+    padding-right: 30px;
+    text-shadow: 2px 2px 8px #000000;
 }
+
 #teclas {
-    grid-template-columns: auto auto auto ;
+    grid-template-columns: auto auto auto auto;
     display: grid;
+    
 }
 .numero {
-    background-color: darkorange;
+    background-color: #AFB42B;
+    border-color: rgb(74,246,38);
     border-radius: 10px;
-    box-shadow: 0;
+    
 }
 
 .caracterEspecial {
@@ -38,16 +64,45 @@ label {
 }
 
 .operaciones {
-    background-color: rgb(248, 217, 38);
+    background-color: #388E3C;
     border-radius: 10px;
+    border-color: rgb(74,246,38);
     box-shadow: 0;
 }
 button {
     width: 140px;
     height: 100px;
     margin-bottom: 5px;
+    font-family: Fallout;
+    font-size: 60px;
+    margin: 5px;
+    
+}
+.numero:hover, .operaciones:hover {
+    background-color: rgb(74,246,38);
 }
 #igual {
-    grid-row: span 2;
-    height: 200px;
+    height: auto;
+    width: auto;
+    grid-column: span 3;
+    background-color: rgb(74,246,38);
 }
+#igual:hover {
+    background-color: rgb(39, 70, 22);
+    border-color: rgb(39, 70, 22);
+}
+button:active {
+    transform:scale(80%);
+}
+
+
+
+@font-face {
+    font-family: Fallout;
+    src: url(./Overseer\ Italic.otf);
+  }
+  
+  @font-face {
+    font-family: Calc;
+    src: url(./CalculatorBold.ttf);
+  }

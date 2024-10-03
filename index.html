@@ -9,34 +9,54 @@
 </head>
 <body>
     <div class="calculadora">
-        <label id="texto"></label>
+        <div id="contenedorTexto">
+            <strong>$ ssh user@server.com</strong><br>
+            <strong>Password: ********</strong><br>
+            <strong>Welcome to the server terminal.</strong><br>
+            <strong>Last login: Mon Oct 02 14:23:01 2023 from 192.168.1.10</strong><br>
+            <strong>[user@server ~]$ ls</strong><br>
+            <strong>Documents  Downloads  Desktop  Images  Music  Videos</strong><br>
+            <strong>[user@server ~]$ cd Documents</strong><br>
+            <strong>[user@server Documents]$ pwd</strong><br>
+            <strong>/home/user/Documents</strong><br>
+            <strong>[user@server Documents]$ cat notes.txt</strong><br>
+            <strong>This is an example of the content of a notes file.</strong><br>
+            <strong>Remember to review the documentation before the meeting.</strong><br>
+            <strong>[user@server Documents]$ exit</strong><br>
+            <strong>Logging out...</strong><br>
+            <strong>[user@server::/Desktop/Calcu/Index.html]</strong>
+
+            <label id="texto" aria-readonly="true"></label>
+        </div>
         <div id="teclas">
             
-                <button id="1" class="numero" onclick="insertarCaracter(1)">1</button>
-                <button id="2" class="numero" onclick="insertarCaracter(2)">2</button>
-                <button id="sumar" class="operaciones" onclick="insertarCaracter('+')">+</button>
-                <button id="3" class="numero" onclick="insertarCaracter(3)">3</button>
+            <button id="7" class="numero" onclick="insertarCaracter(7)">7</button>
                 
-                <button id="4" class="numero" onclick="insertarCaracter(4)">4</button>
-                <button id="restar" class="operaciones" onclick="insertarCaracter('-')">-</button>
-                <button id="5" class="numero" onclick="insertarCaracter(5)">5</button>
-                <button id="6" class="numero" onclick="insertarCaracter(6)">6</button>
-                <button id="multiplicar" class="operaciones" onclick="insertarCaracter('*')">X</button>
-                
-                <button id="7" class="numero" onclick="insertarCaracter(7)">7</button>
-                
-                <button id="8" class="numero" onclick="insertarCaracter(8)">8</button>
-                <button id="dividir" class="operaciones" onclick="insertarCaracter('/')">/</button>
+            <button id="8" class="numero" onclick="insertarCaracter(8)">8</button>
+            
 
-                <button id="9" class="numero" onclick="insertarCaracter(9)">9</button>
-
-                <button id="0" class="numero" onclick="insertarCaracter(0)">0</button>
-                <button id="igual" class="operaciones" style="background-color: coral;" onclick="calcularResultado()">=</button>
-
-                <button id="c" class="caracterEspecial" onclick="limpiarResultado()">C</button>
-                <button id="restar" class="operaciones" onclick="insertarCaracter('.')">,</button>
-                <button id="restar" class="operaciones" onclick="borrarUnCaracter()">⌫</button>
+            <button id="9" class="numero" onclick="insertarCaracter(9)">9</button>
+            <button id="sumar" class="operaciones" onclick="insertarCaracter('+')">+</button>
+            <button id="4" class="numero" onclick="insertarCaracter(4)">4</button>
+            
+            <button id="5" class="numero" onclick="insertarCaracter(5)">5</button>
+            <button id="6" class="numero" onclick="insertarCaracter(6)">6</button>
+            <button id="restar" class="operaciones" onclick="insertarCaracter('-')">-</button>
+            <button id="1" class="numero" onclick="insertarCaracter(1)">1</button>
+            <button id="2" class="numero" onclick="insertarCaracter(2)">2</button>
+            <button id="3" class="numero" onclick="insertarCaracter(3)">3</button>
                 
+                
+            <button id="dividir" class="operaciones" onclick="insertarCaracter('/')">/</button>
+            <button id="0" class="numero" onclick="insertarCaracter(0)">0</button>
+                
+
+            <button id="c" class="caracterEspecial" onclick="limpiarResultado()">C</button>
+            
+            <button id="restar" class="operaciones" onclick="borrarUnCaracter()">⌫</button>
+            <button id="multiplicar" class="operaciones" onclick="insertarCaracter('*')">X</button>
+            <button id="restar" class="operaciones" onclick="insertarCaracter('.')">,</button>
+            <button id="igual" class="operaciones" onclick="calcularResultado()">=</button>
                 
                 
     </div>
