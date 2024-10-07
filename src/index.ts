@@ -7,11 +7,27 @@ let division: boolean = false;
 let labelText = document.getElementById("texto");
 
 function insertarCaracter(numero:string){
-    labelText!.innerText = labelText!.innerText + numero;   
+    const labelTextContent = labelText!.textContent!;
+    if(labelTextContent === "ERROR") {
+        labelText!.innerText = "";
+        labelText!.innerText = labelText!.innerText + numero;
+    }
+    else  labelText!.innerText = labelText!.innerText + numero;
 }
 
 function calcularResultado(){
-    labelText!.innerText = eval(labelText!.textContent!);
+
+    const labelTextContent = labelText!.textContent!;
+    
+    if (labelTextContent === "") labelText!.innerText = "ERROR";
+
+    else {
+        try{
+            labelText!.innerText = eval(labelText!.textContent!);
+        } catch(ERROR){
+            labelText!.innerText = "SINTAX ERROR";
+        }
+    }
 }
 
 function limpiarResultado(){
